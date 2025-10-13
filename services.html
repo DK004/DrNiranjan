@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dr. Niranjan - Home Visit Medical Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-user-md"></i>
+                <span>Dr.Niranjan Kshirsagar</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- services section    -->
+
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+
+                <div class="contact-info">
+                    <div class="hero-content">
+                        <h1>Services</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reiciendis omnis tempore
+                            nemo, exercitationem praesentium asperiores! Exercitationem doloribus pariatur </p>
+                    </div>
+                    <h2>Services Request</h2>
+                    <p>Please provide the following information to schedule your service. Our medical team will contact
+                        you to confirm the appointment.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Response Time</h4>
+                                <p>We typically respond within 2-4 hours during business hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Safe & Secure</h4>
+                                <p>Your information is protected and will only be used for medical purposes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3>Service Request Form</h3>
+
+
+                    <form id="serviceForm" action="https://api.web3forms.com/submit" method="POST"
+                        onsubmit="prepareWeb3Form(event)">
+                        <input type="hidden" name="access_key" value="ceec6e0f-9840-422c-84a5-ffb2f56f7277">
+
+                        <!-- Filled by JS -->
+                        <input type="hidden" name="subject" id="subject" value="">
+                        <input type="hidden" name="from_name" id="from_name" value="">
+                        <input type="hidden" name="message" id="message" value="">
+                        <!-- Honeypot -->
+                        <input type="checkbox" name="botcheck" id="botcheck" style="display:none;" tabindex="-1"
+                            autocomplete="off">
+
+
+                        <!-- Service Type -->
+                        <div class="form-group">
+                            <label for="service-type">Select Service Type</label>
+                            <select id="service-type"  required
+                                onchange="handleServiceTypeChange(this.value)">
+                                <option value="">Select one*</option>
+                                <option value="HomeVisit">Home - Visit</option>
+                                <option value="OtherServices">Other Services</option>
+                                <option value="GovernmentSchemes">Government Schemes</option>
+                            </select>
+                        </div>
+
+                        <!-- Dynamic Sections Container -->
+                        <div id="dynamicContent">
+                            <!-- Default Message -->
+                            <div id="defaultMessage">
+                                <p>Please select a service type above to see related options.</p>
+                            </div>
+
+                            <!-- Home Visit Section -->
+                            <div id="homeVisitSection" class="form-group" style="display: none;">
+                                <label for="doctor-specialization">Doctor Specialization </label>
+                                <select id="doctor-specialization">
+                                    <option value="">Select Doctor Specialization</option>
+                                    <option value="general-physician">General Physician</option>
+                                    <option value="cardiologist">Cardiologist</option>
+                                    <option value="pediatrician">Pediatrician</option>
+                                    <option value="gynecologist">Gynecologist</option>
+                                    <option value="orthopedic">Orthopedic</option>
+                                    <option value="neurologist">Neurologist</option>
+                                    <option value="dermatologist">Dermatologist</option>
+                                    <option value="psychiatrist">Psychiatrist</option>
+                                    <option value="endocrinologist">Endocrinologist</option>
+                                    <option value="gastroenterologist">Gastroenterologist</option>
+                                </select>
+                            </div>
+
+                            <!-- Other Services Section -->
+                            <div id="otherServicesSection" class="form-group" style="display: none;">
+                                <label for="services">Services </label>
+                                <select id="services" >
+                                    <option value="">Select Service</option>
+                                    <option value="IV infusion">IV infusion</option>
+                                    <option value="BP monitoring">BP monitoring</option>
+                                    <option value="Blood Surgery monitoring">Blood Surgery monitoring</option>
+                                    <option value="ECG">ECG</option>
+                                    <option value="X-ray at home">X-ray at home</option>
+                                    <option value="Cast removal/application">Cast removal/application</option>
+                                    <option value="Nebulization">Nebulization</option>
+                                    <option value="Physiotherapy">Physiotherapy</option>
+                                    <option value="Holter study(24hr ecg monitoring)">Holter study (24hr ECG monitoring)
+                                    </option>
+                                    <option value="Dressing and Debridement">Dressing and Debridement</option>
+                                    <option value="Bed Sore management">Bed Sore management</option>
+                                    <option value="Catheterization urine colostomy">Catheterization urine colostomy
+                                    </option>
+                                    <option value="Feeding tube">Feeding tube</option>
+                                    <option value="Central line">Central line</option>
+                                    <option value="Tracheostomy tube change">Tracheostomy tube change</option>
+                                    <option value="Suture removal">Suture removal</option>
+                                    <option value="ICU setup">ICU setup</option>
+                                    <option value="Ward boy at home">Ward boy at home</option>
+                                    <option value="Nursing staff">Nursing staff</option>
+                                </select>
+                            </div>
+
+                            <!-- Government Schemes Section -->
+                            <div id="governmentSchemesSection" class="form-group" style="display: none;">
+                                <label for="schemes">Schemes </label>
+                                <select id="schemes">
+                                    <option value="">Select Scheme</option>
+                                    <option value="Ayushman Bharat – PMJAY">Ayushman Bharat – Pradhan Mantri Jan Arogya
+                                        Yojana</option>
+                                    <option value="CGHS">Central Government Health Scheme (CGHS)</option>
+                                    <option value="RSBY">Rashtriya Swasthya Bima Yojana (RSBY)</option>
+                                    <option value="MJPJAY">Mahatma Jyotiba Phule Jan Arogya Yojana</option>
+                                    <option value="Karunya">Karunya Health Scheme</option>
+                                    <option value="YSR">Dr YSR Aarogyasri Health Care Trust</option>
+                                    <option value="CMIE">Chief Minister's Comprehensive Insurance Scheme (Tamil Nadu)
+                                    </option>
+                                    <option value="Bhamashah">Bhamashah Swasthya Bima Yojana</option>
+                                    <option value="Yeshasvini">Yeshasvini Health Insurance Scheme</option>
+                                    <option value="UHIS">Universal Health Insurance Scheme</option>
+                                    <option value="ESI">Employees' State Insurance Scheme</option>
+                                    <option value="AABY">Aam Aadmi Bima Yojana (AABY)</option>
+                                    <option value="Awaz">Awaz Health Insurance Scheme</option>
+                                </select>
+
+
+
+                                <div class="form-group">
+                                    <label for="phone-govt">Phone Number </label>
+                                    <input type="tel" id="phone-govt" 
+                                        placeholder="Enter your Whatsapp number (10 digits)" pattern="[2-9][0-9]{9}"
+                                        minlength="10" maxlength="10"
+                                        title="Phone number must be 10 digits and cannot start with 0 or 1"
+                                        oninput="validatePhone(this)">
+                                    <span class="error-message" id="phone-govt-error"></span>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Common Address Details Section -->
+
+                            <div class="form-group">
+                                <label for="patient-name">Patient Name </label>
+                                <input type="text" id="patient-name" 
+                                    placeholder="Enter patient name" required minlength="2" maxlength="100"
+                                    pattern="[A-Za-z\s]{2,100}" title="Name should contain only letters and spaces"
+                                    oninput="validateTextOnly(this, 'patient-name')" />
+                                <span class="error-message" id="patient-name-error"></span>
+                            </div>
+
+
+                            <div id="addressDetails" style="display: none;">
+                                <h4>Fill below Details</h4>
+
+                                <div class="form-group">
+                                    <label for="address">Complete Address </label>
+                                    <textarea id="address"  rows="3"
+                                        placeholder="Please provide your complete home address (min. 10 characters)"
+                                        minlength="10" maxlength="200" oninput="validateAddress(this)"></textarea>
+                                    <span class="error-message" id="address-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city">City </label>
+                                    <input type="text" id="city"
+                                        placeholder="Enter your city (letters only)" pattern="[A-Za-z\s]{2,50}"
+                                        minlength="2" maxlength="50"
+                                        title="City name should contain only letters and spaces"
+                                        oninput="validateTextOnly(this, 'city')" />
+                                    <span class="error-message" id="city-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="state">State </label>
+                                    <input type="text" id="state" 
+                                        placeholder="Enter your state (letters only)" pattern="[A-Za-z\s]{2,50}"
+                                        minlength="2" maxlength="50"
+                                        title="State name should contain only letters and spaces"
+                                        oninput="validateTextOnly(this, 'state')" />
+                                    <span class="error-message" id="state-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pincode">Pincode </label>
+                                    <input type="text" id="pincode"  minlength="6" maxlength="6"
+                                        placeholder="Enter 6-digit pincode" pattern="[1-9][0-9]{5}"
+                                        title="Pincode must be 6 digits and cannot start with 0"
+                                        oninput="validatePincode(this)" />
+                                    <span class="error-message" id="pincode-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number </label>
+                                    <input type="tel" id="phone" 
+                                        placeholder="Enter your phone number (10 digits)" pattern="[2-9][0-9]{9}"
+                                        minlength="10" maxlength="10"
+                                        title="Phone number must be 10 digits and cannot start with 0 or 1"
+                                        oninput="validatePhone(this)" />
+                                    <span class="error-message" id="phone-error"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Submit Service Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-user-md"></i>
+                        <span>Dr.Niranjan Kshirsagar</span>
+                    </div>
+                    <p>Bringing professional medical care directly to your home with compassion, expertise, and
+                        convenience.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li>Home visit
+                        <li>Mumbai </li>
+                        <li>Navi Mumbling </li>
+                        <li>Thana Kalyan</li>
+                        <li>Pune </li>
+                        <li>All over Maharashtra</li>
+                        <li>Banglore </li>
+                        <li>Chennai </li>
+                        <li>Andhra pradesh</li>
+                        <li>Delhi </li>
+                        <li>Tamilnadu </li>
+                        <li>Chennai lots of city</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (+91) 9876543210</p>
+                    <p><i class="fas fa-envelope"></i> dr.NiranjanKshirsagar&#64;gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dr.Niranjan Kshirsagar - Home Visit Medical Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
