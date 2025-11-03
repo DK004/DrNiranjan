@@ -253,6 +253,15 @@ body {
     height: 300px;
     object-fit: cover;
 }
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+}
+
 }
 
 .hero-card:hover {
