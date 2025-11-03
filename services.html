@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Dr. Niranjan - Home Visit Medical Services</title>
+    <title>Rx HEALTH CARE - Home Visit Medical Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
        
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -21,10 +21,10 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <i class="fas fa-user-md"></i>
-                <span>Dr.Niranjan Kshirsagar</span>
+                <span>Rx HEALTH CARE</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="/index.html" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -47,8 +47,7 @@
                 <div class="contact-info">
                     <div class="hero-content">
                         <h1>Services</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reiciendis omnis tempore
-                            nemo, exercitationem praesentium asperiores! Exercitationem doloribus pariatur </p>
+                        <p>Select the Service, Select Doctor Specialization, Services, Schemes respectively, provide the required information about patient name, address, city, state and Phone number.</p>
                     </div>
                     <h2>Services Request</h2>
                     <p>Please provide the following information to schedule your service. Our medical team will contact
@@ -114,16 +113,21 @@
                                 <label for="doctor-specialization">Doctor Specialization </label>
                                 <select id="doctor-specialization">
                                     <option value="">Select Doctor Specialization</option>
-                                    <option value="general-physician">General Physician</option>
-                                    <option value="cardiologist">Cardiologist</option>
-                                    <option value="pediatrician">Pediatrician</option>
-                                    <option value="gynecologist">Gynecologist</option>
-                                    <option value="orthopedic">Orthopedic</option>
-                                    <option value="neurologist">Neurologist</option>
-                                    <option value="dermatologist">Dermatologist</option>
-                                    <option value="psychiatrist">Psychiatrist</option>
-                                    <option value="endocrinologist">Endocrinologist</option>
-                                    <option value="gastroenterologist">Gastroenterologist</option>
+                                   <option value="mbbs">MBBS</option>
+                                   <option value="ms-general-surgery">MS General Surgery</option>
+                                   <option value="md-medicine">MD Medicine</option>
+                                   <option value="ophthalmologist">Ophthalmologist</option>
+                                   <option value="ent-specialist">ENT Specialist</option>
+                                   <option value="dermatologist">Dermatologist</option>
+                                   <option value="pediatrician">Pediatrician</option>
+                                   <option value="obstetrician-gynecologist">Obstetrician/Gynecologist</option>
+                                   <option value="psychiatrist">Psychiatrist</option>
+                                   <option value="super-specialist">Super Specialist</option>
+                                   <option value="cardiologist">Cardiologist</option>
+                                   <option value="neurologist">Neurologist</option>
+                                   <option value="nephrologist">Nephrologist</option>
+                                   <option value="urologist">Urologist</option>
+                                   <option value="rheumatologist">Rheumatologist</option>
                                 </select>
                             </div>
 
@@ -132,7 +136,7 @@
                                 <label for="services">Services </label>
                                 <select id="services" >
                                     <option value="">Select Service</option>
-                                    <option value="IV infusion">IV infusion</option>
+                                    <!-- <option value="IV infusion">IV infusion</option>
                                     <option value="BP monitoring">BP monitoring</option>
                                     <option value="Blood Surgery monitoring">Blood Surgery monitoring</option>
                                     <option value="ECG">ECG</option>
@@ -152,7 +156,28 @@
                                     <option value="Suture removal">Suture removal</option>
                                     <option value="ICU setup">ICU setup</option>
                                     <option value="Ward boy at home">Ward boy at home</option>
-                                    <option value="Nursing staff">Nursing staff</option>
+                                    <option value="Nursing staff">Nursing staff</option> -->
+
+
+                                   <option value="iv-infusion">IV Infusion</option>
+                                   <option value="bp-monitoring">BP Monitoring</option>
+                                   <option value="blood-surgery-monitoring">Blood Surgery Monitoring</option>
+                                   <option value="ecg">ECG</option>
+                                   <option value="x-ray-at-home">X-Ray at Home</option>
+                                   <option value="cast-removal-application">Cast Removal/Application</option>
+                                   <option value="nebulization">Nebulization</option>
+                                   <option value="physiotherapy">Physiotherapy</option>
+                                   <option value="holter-study">Holter Study (24hr ECG Monitoring)</option>
+                                   <option value="dressing-and-debridement">Dressing and Debridement</option>
+                                   <option value="bed-sore-management">Bed Sore Management</option>
+                                   <option value="catheterization-urine-colostomy">Catheterization (Urine/Colostomy)</option>
+                                   <option value="feeding-tube">Feeding Tube</option>
+                                   <option value="central-line">Central Line</option>
+                                   <option value="tracheostomy-tube-change">Tracheostomy Tube Change</option>
+                                   <option value="suture-removal">Suture Removal</option>
+                                   <option value="icu-setup">ICU Setup</option>
+                                   <option value="nursing-staff">Nursing Staff</option>
+                                   <option value="ward-boy-at-home">Ward Boy at Home</option>
                                 </select>
                             </div>
 
@@ -161,21 +186,20 @@
                                 <label for="schemes">Schemes </label>
                                 <select id="schemes">
                                     <option value="">Select Scheme</option>
-                                    <option value="Ayushman Bharat – PMJAY">Ayushman Bharat – Pradhan Mantri Jan Arogya
-                                        Yojana</option>
-                                    <option value="CGHS">Central Government Health Scheme (CGHS)</option>
-                                    <option value="RSBY">Rashtriya Swasthya Bima Yojana (RSBY)</option>
-                                    <option value="MJPJAY">Mahatma Jyotiba Phule Jan Arogya Yojana</option>
-                                    <option value="Karunya">Karunya Health Scheme</option>
-                                    <option value="YSR">Dr YSR Aarogyasri Health Care Trust</option>
-                                    <option value="CMIE">Chief Minister's Comprehensive Insurance Scheme (Tamil Nadu)
-                                    </option>
-                                    <option value="Bhamashah">Bhamashah Swasthya Bima Yojana</option>
-                                    <option value="Yeshasvini">Yeshasvini Health Insurance Scheme</option>
-                                    <option value="UHIS">Universal Health Insurance Scheme</option>
-                                    <option value="ESI">Employees' State Insurance Scheme</option>
-                                    <option value="AABY">Aam Aadmi Bima Yojana (AABY)</option>
-                                    <option value="Awaz">Awaz Health Insurance Scheme</option>
+                                    
+                                   <option value="Ayushman Bharat – PMJAY">Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana</option>
+                                   <option value="CGHS">Central Government Health Scheme (CGHS)</option>
+                                   <option value="RSBY">Rashtriya Swasthya Bima Yojana (RSBY)</option>
+                                   <option value="MJPJAY">Mahatma Jyotiba Phule Jan Arogya Yojana</option>
+                                   <option value="Karunya">Karunya Health Scheme (Karunya Arogya Suraksha Padhathi)</option>
+                                   <option value="YSR">Dr YSR Aarogyasri Health Care Trust</option>
+                                   <option value="CMIE">Chief Minister’s Comprehensive Insurance Scheme (Tamil Nadu)</option>
+                                   <option value="Bhamashah">Bhamashah Swasthya Bima Yojana</option>
+                                   <option value="Yeshasvini">Yeshasvini Health Insurance Scheme</option>
+                                   <option value="UHIS">Universal Health Insurance Scheme</option>
+                                   <option value="ESI">Employees’ State Insurance Scheme</option>
+                                   <option value="AABY">Aam Aadmi Bima Yojana (AABY)</option>
+                                   <option value="Awaz">Awaz Health Insurance Scheme</option>
                                 </select>
 
 
@@ -277,7 +301,7 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <i class="fas fa-user-md"></i>
-                        <span>Dr.Niranjan Kshirsagar</span>
+                        <span>Rx HEALTH CARE</span>
                     </div>
                     <p>Bringing professional medical care directly to your home with compassion, expertise, and
                         convenience.</p>
@@ -286,7 +310,7 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="#services">Services</a></li>
 
                     </ul>
@@ -319,7 +343,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Dr.Niranjan Kshirsagar - Home Visit Medical Services. All rights reserved.</p>
+                <p>&copy; 2025 Rx HEALTH CARE - Home Visit Medical Services. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -329,6 +353,5 @@
 
     <script src="script.js"></script>
 </body>
-
 
 </html>

@@ -223,12 +223,7 @@ document.addEventListener('DOMContentLoaded', addScrollToTop);
             return true;
         }
 
-        if (cleanedValue.length < 2) {
-            errorElement.textContent = `${fieldName.charAt(0).toUpperCase() + fieldName.slice(1)} must be at least 2 characters`;
-            input.classList.add('invalid');
-            input.classList.remove('valid');
-            return false;
-        }
+        
 
         // Additional validation for state
         if (fieldName === 'state' && cleanedValue.length >= 2) {
@@ -236,12 +231,6 @@ document.addEventListener('DOMContentLoaded', addScrollToTop);
                 state.toLowerCase().startsWith(cleanedValue.toLowerCase())
             );
             
-            if (matchedState && cleanedValue.length > 3) {
-                errorElement.textContent = matchedState ? `Did you mean: ${matchedState}?` : '';
-                errorElement.style.color = '#2196F3';
-            } else {
-                errorElement.textContent = '';
-            }
         } else {
             errorElement.textContent = '';
         }
